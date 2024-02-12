@@ -72,6 +72,7 @@ if [ "$1" == "playback" ] # Playback
 		# Update Sys dir with playback codes
 		echo "Copying Playback gecko codes"
 		rm -rf "${APPDIR_BIN}/Sys/GameSettings" # Delete netplay codes
+		mkdir -p "${APPDIR_BIN}/Sys/"
 		cp -r "${PLAYBACK_CODES_PATH}/." "${APPDIR_BIN}/Sys/GameSettings/"
 else
 		echo "Using Netplay build config"
